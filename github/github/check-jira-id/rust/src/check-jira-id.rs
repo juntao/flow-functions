@@ -30,9 +30,9 @@ fn _run(s: String) -> Result<String, String> {
     let reg = Regex::new(r"^[A-Za-z]{3}-\d+").unwrap();
 
     if reg.is_match(&pull_request.title) {
-        body = String::from("Welcome");
+        body = String::from("Thank you for raising a PR! We will review it shortly!");
 
-        assignees.insert("jetjinser");
+        assignees.insert("juntao");
     } else {
         body = format!(
             r#"This PR's title doesn't match our requirement.
